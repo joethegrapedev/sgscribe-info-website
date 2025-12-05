@@ -1,10 +1,12 @@
 :root{
     /* Colours */
     --background: #F8FAFD;
+    --button-bg: #1F2A44;
     --callout-bg: #ECF3FF;
     --text-primary: #000000;
     --text-secondary: #1F2A44;
     --text-muted: #A9AEBB;
+    --text-inverse: #FFFFFF;
     --accent-primary: #4A7CEB;
     --accent-secondary: #7ED4C1;
     --border: #1F2A44;

@@ -1,0 +1,268 @@
+.header {
+    background: transparent;
+    height: 95px;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ============================================
+   BRAND
+   ============================================ */
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.header__brand:hover {
+    opacity: 0.8;
+}
+
+.header__brand:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.header__logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.header__brand-name {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+.header__menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: var(--space-1);
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+}
+
+.header__menu-toggle:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.header__menu-icon,
+.header__menu-icon::before,
+.header__menu-icon::after {
+    display: block;
+    background: var(--text-primary);
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.header__menu-icon {
+    width: 24px;
+    position: relative;
+}
+
+.header__menu-icon::before,
+.header__menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    left: 0;
+}
+
+.header__menu-icon::before {
+    top: -8px;
+}
+
+.header__menu-icon::after {
+    bottom: -8px;
+}
+
+/* Mobile menu open state (controlled via JS) */
+.header__menu-toggle[aria-expanded="true"] .header__menu-icon {
+    background: transparent;
+}
+
+.header__menu-toggle[aria-expanded="true"] .header__menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.header__menu-toggle[aria-expanded="true"] .header__menu-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* ============================================
+   NAVIGATION ACTIONS
+   ============================================ */
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.header__btn {
+    font-family: var(--font);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+.header__btn:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Tertiary Button - Log in */
+.header__btn--tertiary {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.header__btn--tertiary:hover {
+    background: rgba(31, 42, 68, 0.05);
+}
+
+.header__btn--tertiary:active {
+    background: rgba(31, 42, 68, 0.1);
+}
+
+/* Secondary Button - Book a demo */
+.header__btn--secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.header__btn--secondary:hover {
+    background: var(--button-bg);
+    color: var(--text-inverse);
+}
+
+.header__btn--secondary:active {
+    transform: translateY(1px);
+}
+
+/* Primary Button - Start for free */
+.header__btn--primary {
+    background: var(--button-bg);
+    color: var(--text-inverse);
+}
+
+.header__btn--primary:hover {
+    background: #2d3a5a;
+}
+
+.header__btn--primary:active {
+    transform: translateY(1px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+    .header {
+        height: 70px;
+    }
+
+    .header__menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__actions {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--background);
+        flex-direction: column;
+        padding: var(--space-3);
+        gap: var(--space-2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 50;
+    }
+
+    /* Visible state (controlled via JS adding class) */
+    .header__actions.is-visible {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header__btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header__brand-name {
+        font-size: 20px;
+    }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .header__actions {
+        gap: var(--space-1);
+    }
+
+    .header__btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .header__btn--tertiary {
+        display: none;
+    }
+}
+
+/* Desktop: >= 1024px */
+@media (min-width: 1024px) {
+    .header__actions {
+        gap: var(--space-2);
+    }
+}
