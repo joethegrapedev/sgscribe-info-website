@@ -19,8 +19,24 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <nav class="header__nav">
-                <!-- Navigation component placeholder -->
+            <nav class="header__nav" aria-label="Main navigation">
+                <!-- Logo and Brand -->
+                <a href="/" class="header__brand" aria-label="SgScribe home">
+                    <img src="assets/icons/logo.svg" alt="SgScribe logo" class="header__logo">
+                    <span class="header__brand-name">SgScribe</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="header__menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="header__menu-icon"></span>
+                </button>
+
+                <!-- Navigation Actions -->
+                <div class="header__actions">
+                    <button class="header__btn header__btn--tertiary">Log in</button>
+                    <button class="header__btn header__btn--secondary">Book a demo</button>
+                    <button class="header__btn header__btn--primary">Start for free</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -30,25 +46,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <nav class="header__nav" aria-label="Main navigation">
-                    <!-- Logo and Brand -->
-                    <a href="/" class="header__brand" aria-label="SgScribe home">
-                        <img src="assets/icons/logo.svg" alt="SgScribe logo" class="header__logo">
-                        <span class="header__brand-name">SgScribe</span>
-                    </a>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button class="header__menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                        <span class="header__menu-icon"></span>
-                    </button>
-
-                    <!-- Navigation Actions -->
-                    <div class="header__actions">
-                        <button class="header__btn header__btn--tertiary">Log in</button>
-                        <button class="header__btn header__btn--secondary">Book a demo</button>
-                        <button class="header__btn header__btn--primary">Start for free</button>
-                    </div>
-                </nav>
+                <!-- Hero component placeholder -->
             </div>
         </section>
 
