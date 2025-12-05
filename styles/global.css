@@ -11,30 +11,30 @@
     --shadow: #000000;
 
     /* Spacing scale (px) */
-    --space-0: 4 px;
-    --space-1: 8 px;
-    --space-2: 16 px;
-    --space-3: 24 px;
-    --space-4: 32 px;
-    --space-5: 48 px;
+    --space-0: 4px;
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
 
     /* Typography */
     --font: 'Manrope', sans-serif;
-    --fs-xxl: 64 px;
-    --fs-xl: 48 px;
-    --fs-lg: 32 px;
-    --fs-md: 24 px;
-    --fs-sm: 16 px;
+    --fs-xxl: 64px;
+    --fs-xl: 48px;
+    --fs-lg: 32px;
+    --fs-md: 24px;
+    --fs-sm: 16px;
 
     /* Radius */
-    --radius-sm: 12 px;
-    --radius-md: 16 px;
-    --radius-lg: 24 px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
 
     /* Breakpoints */
-    --bp-sm: 640 px;
-    --bp-md: 1024 px;
-    --bp-lg: 1280 px;
+    --bp-sm: 640px;
+    --bp-md: 1024px;
+    --bp-lg: 1280px;
 }
 
 *{box-sizing:border-box}
@@ -46,4 +46,20 @@ body{
   margin:0;
   line-height:1.45;
   font-size:var(--fs-md);
+}
+
+/* Container utility */
+.container{
+  max-width:1240px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:var(--space-2);
+  padding-right:var(--space-2);
+}
+
+@media(min-width:640px){
+  .container{
+    padding-left:var(--space-3);
+    padding-right:var(--space-3);
+  }
 }
