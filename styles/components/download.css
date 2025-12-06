@@ -1,0 +1,308 @@
+.download {
+    background: var(--background);
+    padding: 120px 0 40px;
+}
+
+.download__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: center;
+}
+
+/* ============================================
+   TITLE SECTION
+   ============================================ */
+
+.download__title {
+    font-size: var(--fs-xxl);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.download__title-accent {
+    color: var(--accent-primary);
+}
+
+/* ============================================
+   DOWNLOAD SITES SECTION
+   ============================================ */
+
+.download__sites {
+    max-width: 940px;
+    width: 100%;
+    display: flex;
+    gap: 72px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* ============================================
+   DOWNLOAD CARDS
+   ============================================ */
+
+.download__card {
+    background: var(--callout-card-bg);
+    max-width: 434px;
+    flex: 1 1 434px;
+    max-height: 378px;
+    padding: var(--space-4) var(--space-3) var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.download__card:focus-within {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+.download__icon {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.download__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    flex: 1;
+}
+
+.download__header {
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.download__caption {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================
+   CTA BUTTONS
+   ============================================ */
+
+.download__cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 100%;
+}
+
+.download__btn {
+    font-family: var(--font);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.download__btn:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Primary Button */
+.download__btn--primary {
+    background: var(--button-bg);
+    color: var(--text-inverse);
+}
+
+.download__btn--primary:hover {
+    background: #2d3a5a;
+}
+
+.download__btn--primary:active {
+    transform: translateY(1px);
+}
+
+/* Secondary Button */
+.download__btn--secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.download__btn--secondary:hover {
+    background: var(--button-bg);
+    color: var(--text-inverse);
+}
+
+.download__btn--secondary:active {
+    transform: translateY(1px);
+}
+
+/* ============================================
+   COMING SOON
+   ============================================ */
+
+.download__coming-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2) 0;
+}
+
+.download__soon-text {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--text-muted);
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+    .download {
+        padding: 60px 0 40px;
+    }
+
+    .download__wrapper {
+        gap: var(--space-3);
+        padding: 0 var(--space-2);
+    }
+
+    .download__title {
+        font-size: 32px;
+    }
+
+    .download__sites {
+        flex-direction: column;
+        gap: var(--space-3);
+        max-width: 100%;
+    }
+
+    .download__card {
+        max-width: 100%;
+        max-height: none;
+        padding: calc(var(--space-4) * 0.75) calc(var(--space-3) * 0.75) calc(var(--space-3) * 0.75);
+        gap: calc(var(--space-3) * 0.75);
+    }
+
+    .download__icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .download__header {
+        font-size: 24px;
+    }
+
+    .download__caption {
+        font-size: 14px;
+    }
+
+    .download__btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .download__soon-text {
+        font-size: 14px;
+    }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .download {
+        padding: 70px 0 40px;
+    }
+
+    .download__wrapper {
+        padding: 0 var(--space-3);
+    }
+
+    .download__title {
+        font-size: 48px;
+    }
+
+    .download__sites {
+        flex-direction: column;
+        gap: var(--space-4);
+        max-width: 500px;
+    }
+
+    .download__card {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .download__icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .download__header {
+        font-size: 28px;
+    }
+}
+
+/* Desktop: 1024px - 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .download__title {
+        font-size: 56px;
+    }
+
+    .download__sites {
+        gap: var(--space-5);
+    }
+}
+
+/* Large Desktop: >= 1280px */
+@media (min-width: 1280px) {
+    .download__sites {
+        gap: 72px;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .download__card,
+    .download__btn {
+        transition: none;
+    }
+
+    .download__card:hover {
+        transform: none;
+    }
+
+    .download__btn--primary:active,
+    .download__btn--secondary:active {
+        transform: none;
+    }
+}
