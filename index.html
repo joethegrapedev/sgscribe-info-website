@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/components/header.css">
     <link rel="stylesheet" href="styles/components/hero.css">
     <link rel="stylesheet" href="styles/components/value.css">
+    <link rel="stylesheet" href="styles/components/protocols.css">
 </head>
 <body>
     <!-- Header -->
@@ -180,7 +181,83 @@
         <!-- Protocols Section -->
         <section class="protocols">
             <div class="container">
-                <!-- Protocol component placeholder -->
+                <div class="protocols__wrapper">
+                    <!-- Text Section -->
+                    <div class="protocols__text">
+                        <h2 class="protocols__title">
+                            Built on the <span class="protocols__title-accent">highest standards</span>
+                        </h2>
+                        <p class="protocols__subtitle">
+                            We hold ourselves to the highest standards, building every layer of our platform in alignment with industry-proven protocols to ensure accuracy, protect patient privacy, and uphold your trust.
+                        </p>
+                    </div>
+
+                    <!-- Protocol List Section -->
+                    <div class="protocols__list">
+                        <div class="protocols__list-track">
+                            <!-- Original cards -->
+                            <div class="protocols__card">
+                                <p class="protocols__card-text">AES-256</p>
+                            </div>
+                            <div class="protocols__card">
+                                <p class="protocols__card-text">TLS</p>
+                            </div>
+                            <div class="protocols__card">
+                                <p class="protocols__card-text">OWASP</p>
+                            </div>
+                            <div class="protocols__card">
+                                <p class="protocols__card-text">RBAC</p>
+                            </div>
+                            <div class="protocols__card">
+                                <p class="protocols__card-text">HIPAA</p>
+                            </div>
+
+                            <!-- Duplicate cards for seamless loop -->
+                            <div class="protocols__card protocols__card--duplicate" aria-hidden="true">
+                                <p class="protocols__card-text">AES-256</p>
+                            </div>
+                            <div class="protocols__card protocols__card--duplicate" aria-hidden="true">
+                                <p class="protocols__card-text">TLS</p>
+                            </div>
+                            <div class="protocols__card protocols__card--duplicate" aria-hidden="true">
+                                <p class="protocols__card-text">OWASP</p>
+                            </div>
+                            <div class="protocols__card protocols__card--duplicate" aria-hidden="true">
+                                <p class="protocols__card-text">RBAC</p>
+                            </div>
+                            <div class="protocols__card protocols__card--duplicate" aria-hidden="true">
+                                <p class="protocols__card-text">HIPAA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keynote Section -->
+                    <div class="protocols__keynote">
+                        <article class="protocols__keynote-card">
+                            <img src="assets/icons/shield-check.svg" alt="" class="protocols__keynote-icon" aria-hidden="true">
+                            <div class="protocols__keynote-text">
+                                <h3 class="protocols__keynote-header">Industry Standards</h3>
+                                <p class="protocols__keynote-caption">Built on rigorously validated industry standards to ensure accuracy, reliability, and seamless performance in real clinical environments.</p>
+                            </div>
+                        </article>
+
+                        <article class="protocols__keynote-card">
+                            <img src="assets/icons/folder-lock.svg" alt="" class="protocols__keynote-icon" aria-hidden="true">
+                            <div class="protocols__keynote-text">
+                                <h3 class="protocols__keynote-header">Privacy & Security</h3>
+                                <p class="protocols__keynote-caption">Engineered with end-to-end encryption and strict access controls to safeguard patient data at every stage of care.</p>
+                            </div>
+                        </article>
+
+                        <article class="protocols__keynote-card">
+                            <img src="assets/icons/list-check.svg" alt="" class="protocols__keynote-icon" aria-hidden="true">
+                            <div class="protocols__keynote-text">
+                                <h3 class="protocols__keynote-header">Clinical Review</h3>
+                                <p class="protocols__keynote-caption">Continuously refined through expert clinical oversight to deliver trustworthy medical insights that support real-world decision-making.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
 
