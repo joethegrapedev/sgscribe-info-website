@@ -169,11 +169,12 @@
 }
 
 .header__btn--secondary:hover {
-    background: var(--button-bg);
+    background: var(--accent-primary);
     color: var(--text-inverse);
 }
 
 .header__btn--secondary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 
@@ -184,10 +185,11 @@
 }
 
 .header__btn--primary:hover {
-    background: #2d3a5a;
+    background: var(--accent-primary);
 }
 
 .header__btn--primary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 

@@ -83,10 +83,11 @@
 }
 
 .hero__btn--primary:hover {
-    background: #2d3a5a;
+    background: var(--accent-primary);
 }
 
 .hero__btn--primary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 
@@ -98,11 +99,12 @@
 }
 
 .hero__btn--secondary:hover {
-    background: var(--button-bg);
+    background: var(--accent-primary);
     color: var(--text-inverse);
 }
 
 .hero__btn--secondary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 

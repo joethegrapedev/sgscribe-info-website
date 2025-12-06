@@ -140,10 +140,11 @@
 }
 
 .download__btn--primary:hover {
-    background: #2d3a5a;
+    background: var(--accent-primary);
 }
 
 .download__btn--primary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 
@@ -155,11 +156,12 @@
 }
 
 .download__btn--secondary:hover {
-    background: var(--button-bg);
+    background: var(--accent-primary);
     color: var(--text-inverse);
 }
 
 .download__btn--secondary:active {
+    background: var(--accent-primary);
     transform: translateY(1px);
 }
 
