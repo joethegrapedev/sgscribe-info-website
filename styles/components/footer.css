@@ -1,0 +1,222 @@
+.footer {
+    background: var(--background);
+    border-top: 1px solid rgba(31, 42, 68, 0.25); /* var(--border) with 25% opacity */
+    padding: 64px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+/* ============================================
+   TEXT SECTION (LEFT)
+   ============================================ */
+
+.footer__text {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    flex: 1;
+}
+
+/* ============================================
+   COMPANY INFO
+   ============================================ */
+
+.footer__company {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.footer__logo {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+.footer__company-name {
+    font-size: var(--fs-md);
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+/* ============================================
+   NAVIGATION LINKS
+   ============================================ */
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.footer__link {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.footer__link:hover {
+    opacity: 0.7;
+}
+
+.footer__link:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   SOCIAL LINKS (RIGHT)
+   ============================================ */
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: var(--radius-sm);
+}
+
+.footer__social-link:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.footer__social-link:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.footer__social-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .footer__text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+        width: 100%;
+    }
+
+    .footer__company {
+        gap: var(--space-1);
+    }
+
+    .footer__logo {
+        height: 24px;
+    }
+
+    .footer__company-name {
+        font-size: 20px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .footer__link {
+        font-size: 14px;
+    }
+
+    .footer__social {
+        align-self: flex-start;
+    }
+
+    .footer__social-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer__social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .footer {
+        padding: 48px 0;
+    }
+
+    .footer__wrapper {
+        gap: var(--space-4);
+    }
+
+    .footer__text {
+        gap: var(--space-4);
+    }
+
+    .footer__logo {
+        height: 28px;
+    }
+
+    .footer__company-name {
+        font-size: 22px;
+    }
+
+    .footer__nav {
+        gap: var(--space-2);
+    }
+
+    .footer__link {
+        font-size: 15px;
+    }
+}
+
+/* Desktop: >= 1024px */
+@media (min-width: 1024px) {
+    .footer__wrapper {
+        gap: var(--space-5);
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .footer__link,
+    .footer__social-link {
+        transition: none;
+    }
+
+    .footer__social-link:hover {
+        transform: none;
+    }
+}

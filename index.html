@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/components/value.css">
     <link rel="stylesheet" href="styles/components/protocols.css">
     <link rel="stylesheet" href="styles/components/download.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
 </head>
 <body>
     <!-- Header -->
@@ -306,7 +307,30 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- Footer component placeholder -->
+            <div class="footer__wrapper">
+                <!-- Text Section (Left) -->
+                <div class="footer__text">
+                    <!-- Company Info -->
+                    <div class="footer__company">
+                        <img src="assets/icons/logo.svg" alt="SgScribe logo" class="footer__logo">
+                        <span class="footer__company-name">SgScribe</span>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <a href="#features" class="footer__link">Core features</a>
+                        <a href="#learn" class="footer__link">Learn more</a>
+                        <a href="#support" class="footer__link">Support</a>
+                    </nav>
+                </div>
+
+                <!-- Social Links (Right) -->
+                <div class="footer__social">
+                    <a href="https://instagram.com/sgscribe" class="footer__social-link" aria-label="Follow SgScribe on Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/social-link-instagram.png" alt="Instagram" class="footer__social-icon">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
