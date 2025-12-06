@@ -69,6 +69,8 @@
     transition: all 0.2s ease;
     border: none;
     white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .hero__btn:focus-visible {

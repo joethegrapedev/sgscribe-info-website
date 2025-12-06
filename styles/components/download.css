@@ -126,6 +126,8 @@
     white-space: nowrap;
     width: 100%;
     text-align: center;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .download__btn:focus-visible {
