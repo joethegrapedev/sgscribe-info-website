@@ -3,13 +3,19 @@
     min-height: 952px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .hero__content {
+    max-width: 1300px;
     width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 0;
+    background: var(--callout-bg);
 }
 
 /* ============================================

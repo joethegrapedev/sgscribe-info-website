@@ -54,8 +54,8 @@ body{
 /* Container utility */
 .container{
   max-width:1240px;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 0 auto;
+  justify-content: center;
   padding-left:var(--space-2);
   padding-right:var(--space-2);
 }

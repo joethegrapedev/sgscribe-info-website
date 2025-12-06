@@ -9,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    width: 100%;
+    gap: 0;
 }
 
 /* ============================================
@@ -17,6 +18,7 @@
    ============================================ */
 
 .header__brand {
+    flex: 1;
     display: flex;
     align-items: center;
     gap: var(--space-1);
@@ -203,6 +205,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: auto;
     }
 
     .header__actions {
@@ -220,6 +223,7 @@
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 50;
+        margin-left: 0;
     }
 
     /* Visible state (controlled via JS adding class) */
