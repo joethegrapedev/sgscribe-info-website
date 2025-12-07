@@ -68,3 +68,30 @@ body{
     padding-right:var(--space-3);
   }
 }
+
+/* ============================================
+   Scroll Animation Styles
+   ============================================ */
+
+/* Initial state: Hidden and slightly moved down */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animated state: Visible and in original position */
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
