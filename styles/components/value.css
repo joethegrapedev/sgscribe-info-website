@@ -94,6 +94,7 @@
     height: auto;
     display: block;
     border-radius: var(--radius-md);
+    object-fit: cover;
 }
 
 /* ============================================
