@@ -2,7 +2,7 @@
     background: var(--background);
     border-top: 1px solid rgba(31, 42, 68, 0.25); /* var(--border) with 25% opacity */
     padding: 64px 0;
-    display: none; /* Hide footer, original value of display: flex; */
+    display: flex; /* Hide footer, original value of display: flex; */
     align-items: center;
 }
 
@@ -59,7 +59,17 @@
     flex-wrap: wrap;
 }
 
+.footer__contact {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+}
+
 .footer__link {
+    display: none; /* Hide navigation links, original: omit this line */
     font-size: var(--fs-sm);
     font-weight: 400;
     color: var(--text-primary);
@@ -83,7 +93,7 @@
    ============================================ */
 
 .footer__social {
-    display: flex;
+    display: none; /* Hide social links, original: flex */
     align-items: center;
     gap: var(--space-2);
 }

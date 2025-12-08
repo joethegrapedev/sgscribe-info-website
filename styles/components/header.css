@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 0;
+    gap: auto;
 }
 
 /* ============================================
@@ -24,7 +24,7 @@
    ============================================ */
 
 .header__brand {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     gap: var(--space-1);
@@ -49,6 +49,7 @@
 }
 
 .header__brand-name {
+    width: fit-content;
     font-size: var(--fs-md);
     font-weight: 600;
     color: var(--text-primary);
@@ -130,6 +131,45 @@
     display: flex;
     align-items: center;
     gap: var(--space-2);
+}
+
+/* ============================================
+   IN-PAGE NAVIGATION LINKS
+   ============================================ */
+   
+.header__nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    flex: 1;
+}
+
+.header__link {
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.header__link:hover {
+    background: rgba(31, 42, 68, 0.05);
+}
+
+.header__link:focus-visible {
+   background: rgba(31, 42, 68, 0.05);
 }
 
 /* ============================================

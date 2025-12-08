@@ -36,7 +36,7 @@ const observer = new IntersectionObserver(animateOnScroll, observerOptions);
  */
 document.addEventListener('DOMContentLoaded', () => {
     // Select all sections that should animate on scroll
-    const sections = document.querySelectorAll('.value, .protocols, .download');
+    const sections = document.querySelectorAll('.value, .protocols, .download, .investment');
 
     // Add animation class and start observing each section
     sections.forEach(section => {
