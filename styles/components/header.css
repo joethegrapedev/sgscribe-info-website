@@ -1,5 +1,11 @@
 .header {
-    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: var(--background);
     height: 95px;
     display: flex;
     align-items: center;

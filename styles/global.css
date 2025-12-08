@@ -49,6 +49,7 @@ body{
   margin:0;
   line-height:1.45;
   font-size:var(--fs-md);
+  padding-top: 95px; /* To offset fixed header height */
 }
 
 /* Container utility */
