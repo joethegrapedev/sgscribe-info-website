@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/components/value.css">
     <link rel="stylesheet" href="styles/components/protocols.css">
     <link rel="stylesheet" href="styles/components/download.css">
+    <link rel="stylesheet" href="styles/components/investment.css">
     <link rel="stylesheet" href="styles/components/footer.css">
 </head>
 <body>
@@ -311,6 +312,199 @@
                 </div>
             </div>
         </section>
+
+        <!-- Investment Section -->
+         <section class="investment">
+            <div class="container">
+                <!-- Investment section placeholder -->
+            </div>
+        </section>
+
+        <!-- Investment Section -->
+        <section class="investment" id="investment">
+            <div class="investment__container">
+                <div class="investment__text">
+                    <h2 class="investment__heading">
+                        <span class="investment__heading-accent">Partner</span> with us
+                    </h2>
+                    <p class="investment__description">
+                        We welcome interest from aligned angels, strategic partners, and early-stage investors. Submit your details below and our founder will reach out privately.
+                    </p>
+                </div>
+                
+                <div class="investment__form-wrapper">
+                    <form class="investment__form" id="investmentForm" aria-labelledby="investment-heading">
+                        <div class="investment__input-fields">
+                        <div class="investment__field">
+                            <label for="email" class="investment__label">
+                            Email <span class="investment__required">*</span>
+                            </label>
+                            <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="investment__input" 
+                            placeholder="Email"
+                            required
+                            aria-required="true"
+                            >
+                        </div>
+                        
+                        <div class="investment__field">
+                            <label for="fullname" class="investment__label">
+                            Full name <span class="investment__required">*</span>
+                            </label>
+                            <input 
+                            type="text" 
+                            id="fullname" 
+                            name="fullname" 
+                            class="investment__input" 
+                            placeholder="Full name"
+                            required
+                            aria-required="true"
+                            >
+                        </div>
+                        
+                        <div class="investment__field">
+                            <label for="organisation" class="investment__label">
+                            Organisation
+                            </label>
+                            <input 
+                            type="text" 
+                            id="organisation" 
+                            name="organisation" 
+                            class="investment__input" 
+                            placeholder="(Optional)"
+                            >
+                        </div>
+                        
+                        <div class="investment__field">
+                            <label for="notes" class="investment__label">
+                            Notes
+                            </label>
+                            <textarea 
+                            id="notes" 
+                            name="notes" 
+                            class="investment__input investment__input--textarea" 
+                            placeholder="(Optional)"
+                            rows="3"
+                            ></textarea>
+                        </div>
+                        </div>
+                        
+                        <button 
+                        type="submit" 
+                        class="investment__submit" 
+                        id="submitButton"
+                        disabled
+                        aria-label="Submit investment inquiry"
+                        >
+                        Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Toast Notification -->
+            <div class="investment__toast" id="investmentToast" role="alert" aria-live="polite">
+                <div class="investment__toast-content">
+                    <span class="investment__toast-message">Thank you! We'll be in touch soon.</span>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Form validation and submission handling
+            (function() {
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz68v41YjO5dV8pLI5XCLqj6JJBapFYeJ92DkuJCfugGF1u0BhZzUgH5aZnX2d46d-3/exec';
+                
+                const form = document.getElementById('investmentForm');
+                const emailInput = document.getElementById('email');
+                const fullnameInput = document.getElementById('fullname');
+                const submitButton = document.getElementById('submitButton');
+                const toast = document.getElementById('investmentToast');
+                
+                // Validate required fields
+                function validateForm() {
+                    const isValid = emailInput.value.trim() !== '' && fullnameInput.value.trim() !== '';
+                    submitButton.disabled = !isValid;
+                    submitButton.classList.toggle('investment__submit--active', isValid);
+                }
+                
+                // Show toast notification
+                function showToast(message, isError = false) {
+                    const toastMessage = toast.querySelector('.investment__toast-message');
+                    const toastIcon = toast.querySelector('.investment__toast-icon');
+                    
+                    toastMessage.textContent = message;
+                    
+                    if (isError) {
+                        toast.classList.add('investment__toast--error');
+                    } else {
+                        toast.classList.remove('investment__toast--error');
+                    }
+                    
+                    toast.classList.add('investment__toast--show');
+                    
+                    setTimeout(() => {
+                        toast.classList.remove('investment__toast--show');
+                    }, 5000);
+                }
+                
+                // Add event listeners for validation
+                emailInput.addEventListener('input', validateForm);
+                fullnameInput.addEventListener('input', validateForm);
+                
+                // Handle form submission
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Disable submit button during submission
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Submitting...';
+                    
+                    const formData = new FormData(form);
+                    const data = {
+                        email: formData.get('email'),
+                        fullname: formData.get('fullname'),
+                        organisation: formData.get('organisation'),
+                        notes: formData.get('notes')
+                    };
+                    
+                    try {
+                        const response = await fetch(SCRIPT_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data)
+                        });
+                        
+                        // Show success message
+                        showToast('Thank you! We\'ll be in touch soon.');
+                        
+                        // Clear form
+                        form.reset();
+                        validateForm();
+                        
+                    } catch (error) {
+                        console.error('Error:', error);
+                        showToast('Something went wrong. Please try again.', true);
+                    } finally {
+                        // Reset submit button
+                        submitButton.textContent = 'Submit';
+                        validateForm();
+                    }
+                });
+                
+                // Clear form on page load
+                window.addEventListener('load', function() {
+                    form.reset();
+                    validateForm();
+                });
+            })();
+        </script>
     </main>
     
     <!-- Footer -->

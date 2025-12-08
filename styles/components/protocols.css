@@ -1,6 +1,7 @@
 .protocols {
     background: var(--callout-bg);
     max-width: 1240px;
+    border-radius: var(--radius-lg);
     padding-top: 120px;
     margin: 0 auto;
 }
