@@ -2,7 +2,7 @@
     background: var(--callout-bg);
     max-width: 1240px;
     border-radius: var(--radius-lg);
-    padding-top: 120px;
+    padding-top: 60px;
     margin: 0 auto;
 }
 
@@ -204,7 +204,7 @@
 /* Mobile: < 640px */
 @media (max-width: 639px) {
     .protocols {
-        padding-top: 60px;
+        padding-top: 32px;
     }
 
     .protocols__wrapper {
@@ -285,7 +285,7 @@
 /* Tablet: 640px - 1023px */
 @media (min-width: 640px) and (max-width: 1023px) {
     .protocols {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 
     .protocols__wrapper {
@@ -320,7 +320,7 @@
 /* Desktop: 1024px - 1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .protocols {
-        padding-top: 100px;
+        padding-top: 50px;
     }
 
     .protocols__title {

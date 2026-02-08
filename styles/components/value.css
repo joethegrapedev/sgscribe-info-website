@@ -1,6 +1,6 @@
 .value {
     background: var(--background);
-    padding: 160px 0 80px;
+    padding: 80px 0 40px;
 }
 
 .value__wrapper {
@@ -104,7 +104,7 @@
 /* Mobile: < 640px */
 @media (max-width: 639px) {
     .value {
-        padding: 60px 0 40px;
+        padding: 40px 0 24px;
     }
 
     .value__title-section {
@@ -155,7 +155,7 @@
 /* Tablet: 640px - 1023px */
 @media (min-width: 640px) and (max-width: 1023px) {
     .value {
-        padding: 80px 0 60px;
+        padding: 50px 0 30px;
     }
 
     .value__title-section {
@@ -199,7 +199,7 @@
 /* Desktop: 1024px - 1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .value {
-        padding: 100px 0 70px;
+        padding: 60px 0 40px;
     }
 
     .value__title-section {
